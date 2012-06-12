@@ -1,0 +1,13 @@
+<script type="text/coffeescript">
+	{% if object.wrap == 'domready' %}
+fn=() -> {{object.javascript|safe}}
+		{% if object.framework.group.name == 'jQuery' %}
+$( fn )
+		{% else %}
+fn()
+		{% endif %}
+	{% else %}
+{{object.javascript|safe}}
+	{% endif %}
+	
+</script>

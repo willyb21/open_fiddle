@@ -1,0 +1,11 @@
+<ul>
+	{% for f in fiddles %}
+	<li><a href="#">{{f.slug}} </a>
+		{% if f.fiddle_set.count > 0 %}
+		{% with fiddles=f.fiddle_set.all %}
+		{# include 'fiddler/inc_fiddle_list.html' #}
+		{% endwith %}
+		{% endif %}
+	</li>
+	{% endfor %}
+</ul>

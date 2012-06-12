@@ -1,0 +1,50 @@
+{% load fiddle_tags %}
+<!doctype html>
+<html>
+	<head>
+		<meta http-Equiv="Cache-Control" Content="no-cache">
+		<meta http-Equiv="Pragma" Content="no-cache">
+		<meta http-Equiv="Expires" Content="0">	
+		<title>{% firstof object.title "Fiddle Ripoff" %}</title>
+		{% if object.cssreset %}
+		<link rel="stylesheet" href="{{STATIC_URL}}reset.css" />
+		{% endif %}
+		{% for r in object.get_css_resources %}
+		<link rel="stylesheet" href="{{r}}" />
+		{% endfor %}
+		{% if object.css %}
+		<style>
+			{% if object.csspanel == 'pcss' %}
+			{{object.css|pcss}}
+			{% else %}
+				{% if object.csspanel == 'scss' %}
+			{{object.css|scss}}
+				{% else %}
+			{{object.css|safe}}
+				{% endif %}
+			{% endif %}
+		</style>
+		{% endif %}
+		{% if object.framework %}<script src="{{object.framework.url}}"{% if object.framework_attrs %} {{object.framework_attrs}}{% endif %}></script>{% endif %}
+		{% if object.jspanel == 'coffeescript' %}
+		<script src="{{STATIC_URL}}javascript/coffee-script.js"></script>
+		{% endif %}
+		
+		{% if object.deps.count %}
+		{% for dep in object.deps.all %}
+		{% for url in dep.get_resources %}
+		<script src="{{url}}"></script>
+		{% endfor %}
+		{% endfor %}
+		{% endif %}
+		{% for url in object.get_js_resources %}
+		<script src="{{url}}"></script>
+		{% endfor %}
+		
+		{% if object.wrap == 'head' %}{% include 'open_fiddle/inc_js.html' %}{% endif %}
+	</head>
+	{{object.bodytag|safe}}
+		{{object.html|safe}}
+		{% if object.wrap != 'head' %}{% include 'open_fiddle/inc_js.html' %}{% endif %}
+	</body>
+</html>

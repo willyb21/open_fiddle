@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load fiddle_tags cleverstyle_tags %}
+
+{% block body_class %}dashboard{% endblock %}
+{% block css %}
+{{block.super}}
+{% cleverstyle 'dashboard.pcss' %}
+{% endblock %}
+
+{% block javascript %}
+{% include 'jquery.html' %}
+<script src="{{STATIC_URL}}javascript/jquery-ui.min.js"></script>
+<script src="{{STATIC_URL}}javascript/jquery.cookie.js"></script>
+<script src="{{STATIC_URL}}javascript/jquery.form.js"></script>
+<script src="{{STATIC_URL}}dashboard.js"></script>
+{% endblock %}
+
+{% block header %}
+{{block.super}}
+{% include 'open_fiddle/inc_inline_header_list.html' %}
+
+{% endblock %}
+
+{% block main %}
+<div class="fiddleWrap">
+	<div class="fiddleList">
+		<div class="pagehead">
+			<ul class="buttons right"><li><a href="/" class="right">New fiddle</a></li></ul>
+		<h2>YOUR FIDDLE RIPOFFS</h2>
+		</div>
+		{% for fiddle in object_list %}
+		<div class="fiddleDisplay">
+			{% with fiddles=fiddle.get_revisions %}
+			<ul class="revisionList">
+				{% for f in fiddles %}
+					<li{% if f.base %} class="base"{% endif %}>{% if f.base %}
+						<a href="{{f.get_absolute_url}}">{{f.title}} <span class="slug">{{ f.slug }}</span></a>
+					{% else %}
+						<a href="{{f.get_absolute_url}}" class="fiddleName">revision #{{f.revision}}</a>
+					{% endif %}
+						
+						<span class="date">{{f.created|date:"F j, Y h:i a"}}</span>
+						<a href="{{f|embedded_url:"html,javascript,css,results"}}">Preview</a> [ <a class="delete" href="{% url 'delete_fiddle' f.slug f.revision %}" title="{% if f.base %}Delete this entire fiddle history{% else %}Delete this fiddle{% endif %}">x</a> ]
+					</li>
+				{% endfor %}
+			</ul>
+			{% endwith %}
+		</div>
+		{% empty %}
+		<p class="emtpy">You have not saved any fiddles yet.</p>
+		{% endfor %}
+	</div>
+
+	<form id="deleteForm" style="display: none;">
+		{% csrf_token %}
+	</form>
+</div>
+{% endblock %}

@@ -1,0 +1,797 @@
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+body {
+  font-family: Abel, Tahoma, Arial;
+  font-size: small;
+  overflow: hidden;
+}
+
+body a {
+  text-decoration: none;
+}
+
+body.embedded .header {
+  padding-bottom: 0 !important;
+}
+
+body.fiddle_edit label {
+  display: block;
+  padding: 5px 0;
+  color: #888888;
+}
+
+body.fiddle_edit p.combo input[ type="text" ] {
+  width: 156px;
+}
+
+body.fiddle_edit p.combo .button {
+  vertical-align: top;
+  display: block;
+  width: 26px;
+  background: #dddddd;
+  border-radius: 0;
+  color: #333333;
+  border: 1px solid #aaaaaa;
+  border-left-width: 0;
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 24px;
+  padding: 0;
+}
+
+body.fiddle_edit input[ type="text" ],
+body.fiddle_edit textarea,
+body.fiddle_edit select {
+  margin: 0;
+  color: #333333;
+}
+
+body.fiddle_edit select {
+  display: block;
+}
+
+body.fiddle_edit table.panels td {
+  width: 50%;
+  padding: 5px;
+}
+
+body.fiddle_edit table.panels td select {
+  width: 85px;
+  font-size: 11px;
+}
+
+.header {
+  padding: 5px;
+  overflow: hidden;
+  background: url(header.png) repeat left top;
+}
+
+.header h1 {
+  float: left;
+  width: 200px;
+  padding: 5px 0;
+  margin: 0;
+  font-family: 'Maven Pro', Arial;
+  letter-spacing: -1px;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.header h1 a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+input[ type="text" ],
+textarea {
+  border: 1px solid #aaaaaa;
+}
+
+ul.inline {
+  margin-top: -2px;
+}
+
+ul.inline li {
+  float: left;
+  overflow: visible;
+  height: 12px;
+  border-left: 1px solid #ffffff;
+  padding: 0 10px;
+  vertical-align: top;
+  color: #ffffff;
+}
+
+ul.inline li a {
+  color: #ffffff;
+  display: block;
+  position: relative;
+}
+
+ul.inline li strong {
+  font-size: 15px;
+  color: #e2fcfe;
+  margin-right: 20px;
+}
+
+ul.inline li:first-child {
+  border: none;
+}
+
+.dropdown {
+  position: absolute;
+  z-index: 35;
+  border: 1px solid #444444;
+  background: #ffffff;
+}
+
+.dropdown ul {
+  width: 150px;
+}
+
+.dropdown ul li a {
+  padding: 8px 4px;
+  color: #777777;
+  display: block;
+  border-bottom: 1px dashed #777777;
+}
+
+.dropdown ul li a:hover {
+  background-color: #444444;
+  color: #ffffff;
+}
+
+.dropdown ul li:last-child a {
+  border-bottom: none;
+}
+
+.dropdown.sharing {
+  width: 250px;
+}
+
+.dropdown.sharing input[type="text"] {
+  width: 225px;
+  font-size: 11px;
+  color: #555555;
+}
+
+a.dropdownTrigger {
+  display: block;
+  width: 11px;
+  height: 11px;
+  padding: 0 !important;
+  background: url(/static/point.png) no-repeat left -11px;
+  margin: 5px;
+}
+
+a.dropdownTrigger.down {
+  background-position: left bottom;
+}
+
+a.dropdownTrigger.open {
+  background-position: left -22px;
+}
+
+.CodeMirror {
+  line-height: 1.4em !important;
+}
+
+table.pairing td,
+table.sorting td,
+table.pairing th,
+table.sorting th {
+  padding: 8px;
+}
+
+table.pairing th,
+table.sorting th {
+  text-align: left;
+}
+
+table.pairing td,
+table.sorting td {
+  vertical-align: middle;
+}
+
+table.pairing td .handle,
+table.sorting td .handle {
+  display: block;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  background: url(/static/drag.png) no-repeat center center;
+  cursor: move;
+}
+
+table.pairing tr.deleted td,
+table.sorting tr.deleted td {
+  background-color: #ffd2d2;
+}
+
+table.pairing tr.deleted td input[ type="text" ],
+table.sorting tr.deleted td input[ type="text" ] {
+  font-style: italic;
+  color: #fd6c6c;
+}
+
+table.pairing.keyPairing td:first-child,
+table.sorting.keyPairing td:first-child {
+  width: 125px;
+}
+
+table.pairing.keyPairing input[ type="text"],
+table.sorting.keyPairing input[ type="text"] {
+  width: 75px;
+}
+
+table.pairing.keyPairing span.keycombo,
+table.sorting.keyPairing span.keycombo {
+  border: 1px solid #ffffff;
+  color: #106f9b;
+  font-size: 110%;
+  cursor: pointer;
+}
+
+table.pairing.keyPairing span.keycombo:hover,
+table.sorting.keyPairing span.keycombo:hover {
+  border-color: #a4d9f2;
+}
+
+table.pairing input[ type="text" ],
+table.sorting input[ type="text" ] {
+  font-size: 15px;
+  padding: 4px;
+  width: 550px;
+}
+
+table.pairing input[ type="text" ].name,
+table.sorting input[ type="text" ].name {
+  width: 180px;
+}
+
+.leftPanel {
+  float: left;
+  width: 199px;
+  background: #ffffff;
+  height: 100%;
+  position: relative;
+  border-right: 1px solid #aaaaaa;
+}
+
+.leftPanel.hidden {
+  width: 0;
+  padding: 0;
+}
+
+.leftPanel.hidden ul {
+  display: none;
+}
+
+.leftPanel.hidden a.toggler {
+  right: 0;
+  top: 0;
+}
+
+.leftPanel label {
+  font-size: 11px;
+}
+
+.leftPanel .accordion input[ type="text" ],
+.leftPanel .accordion textarea {
+  width: 181px;
+  padding: 0 2px;
+  height: 24px;
+}
+
+.leftPanel .accordion select {
+  width: 187px;
+  padding: 4px;
+}
+
+.leftPanel .accordion textarea {
+  height: 80px;
+}
+
+.leftPanel .accordion >li {
+  padding: 0;
+  border-bottom: 1px solid #aaaaaa;
+}
+
+.leftPanel .accordion >li >a {
+  display: block;
+  color: #555555;
+  font-size: 15px;
+  padding: 8px 5px;
+  background: url(/static/toggleright.png) no-repeat 95% center;
+}
+
+.leftPanel .accordion >li >a span {
+  font-size: 10px;
+}
+
+.leftPanel .accordion >li >a.open {
+  background-image: url(/static/toggledown.png);
+  background-color: #dddddd;
+  color: #333333;
+}
+
+.leftPanel .accordion >li >a:hover {
+  color: #333333;
+}
+
+.leftPanel .accordion >li .content {
+  display: none;
+  background: #f9f9f9;
+}
+
+.leftPanel .depslist {
+  padding: 5px;
+}
+
+.leftPanel .depslist ul label {
+  padding: 0;
+  color: #333333;
+  font-size: 13px;
+}
+
+.leftPanel .depslist ul label input[type="checkbox"] {
+  margin: 1px 3px;
+}
+
+.leftPanel ol {
+  list-style: none;
+  padding: 5px;
+  margin: 2px 10px;
+  font-size: 14px;
+  color: #333333;
+}
+
+.leftPanel ol a {
+  color: #222222;
+}
+
+.leftPanel ol li {
+  padding: 8px 0;
+  border-bottom: 1px dashed #999999;
+}
+
+.leftPanel ol .remove {
+  background: #810000 url(/static/icons/reset.png) no-repeat center center;
+  display: block;
+  width: 14px;
+  height: 14px;
+}
+
+.leftPanel p {
+  padding: 5px;
+  overflow: hidden;
+}
+
+.leftPanel p.current_name {
+  font-weight: bold;
+  font-size: 15px;
+  padding-left: 22px;
+  color: #444444;
+  background: url(/static/icons/star.png) no-repeat 2px center;
+  border-bottom: 1px solid #999999;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.inlinespan {
+  font-family: Arial;
+  font-size: 11px;
+  color: #333333;
+}
+
+.rightPanel {
+  background: #eeeeee;
+  position: relative;
+  margin-left: 200px;
+}
+
+.rightPanel.expanded {
+  margin-left: 0;
+}
+
+.panelWrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.panelWrap textarea {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.panelWrap .resizer,
+.panelWrap .panelColumn {
+  position: absolute;
+}
+
+.panelWrap .panelColumn {
+  z-index: 9;
+}
+
+.panelWrap .panelColumn .editor {
+  position: absolute;
+  background-color: #ffffff;
+  z-index: 11;
+  border: 1px solid #aaaaaa;
+}
+
+.panelWrap .panelColumn .editor.focus {
+  border-color: #14517c;
+  border-style: ridge;
+}
+
+.panelWrap .panelColumn .editorLabel {
+  background-color: #eeeeee;
+  position: relative;
+  border-bottom: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+}
+
+.panelWrap .panelColumn .editorLabel.hiding {
+  opacity: .3;
+  filter: `alpha opacity=30 `;
+  background: #ffffff;
+}
+
+.panelWrap .panelColumn .editorLabel.hiding .labelText {
+  color: #000000;
+}
+
+.panelWrap .panelColumn .editorLabel .labelText {
+  font-family: Arial;
+  display: block;
+  padding: 5px;
+  color: #444444;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.panelWrap .resizer {
+  background: #eeeeee url(/static/vresize.png) no-repeat center center;
+  z-index: 30;
+}
+
+.panelWrap .resizer.ewresizer {
+  width: 10px;
+  height: 100%;
+  cursor: ew-resize;
+}
+
+.panelWrap .resizer.nsresizer {
+  background-image: url(/static/hresize.png);
+  height: 10px;
+  cursor: ns-resize;
+  width: 100%;
+}
+
+.panelMask {
+  z-index: 29;
+  position: absolute;
+}
+
+#leftColumn,
+#rightColumn {
+  top: 10px;
+}
+
+#leftColumn {
+  left: 10px;
+}
+
+#rightColumn {
+  left: 50%;
+}
+
+.overlay,
+.modal {
+  position: absolute;
+  background: #ffffff;
+}
+
+.overlay {
+  opacity: .8;
+  background: #333333;
+  z-index: 34;
+}
+
+.modal {
+  z-index: 35;
+  display: none;
+  box-shadow: 0 0 15px #666666;
+  border-radius: 2px;
+  border: 1px solid #19608c;
+  width: 300px;
+  position: absolute;
+}
+
+.modal strong {
+  font-weight: bold;
+}
+
+.modal h3 {
+  padding: 5px;
+  font-size: 17px;
+  background: url(header.png) repeat left top;
+  color: #ffffff;
+  cursor: move;
+}
+
+.modal a.close {
+  display: block;
+  width: 14px;
+  height: 14px;
+  margin: 4px;
+  background: url(icons/reset.png) no-repeat center center;
+}
+
+.modal p,
+.modal ul {
+  padding: 5px 15px;
+  font-size: 13px;
+  font-family: Arial;
+}
+
+.modal ul {
+  list-style: disc inside;
+}
+
+.modal p.fileInput {
+  margin: 10px;
+  border: 1px solid #aaaaaa;
+  background: #eeeeee;
+}
+
+.modal li {
+  padding: 5px;
+}
+
+.modal .help_text {
+  font-size: 11px;
+  color: #195e8a;
+}
+
+.modal form table td,
+.modal form table th {
+  padding: 6px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.modal form table th {
+  text-align: right;
+}
+
+.modal form table label {
+  display: inline;
+  padding: 0;
+  white-space: nowrap;
+  color: #555555;
+}
+
+.modal form table input[ type="text"],
+.modal form table textarea {
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.modal form table select {
+  width: 100px;
+}
+
+.modal form input.number {
+  width: 30px;
+  text-align: center;
+}
+
+.modal form input {
+  margin: 0;
+}
+
+.modal.editorModal {
+  width: auto;
+}
+
+.modal.optionsModal {
+  width: 200px;
+}
+
+.modal.optionsModal ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modal.optionsModal ul li {
+  padding: 0;
+}
+
+.modal.optionsModal ul a {
+  display: block;
+  padding: 8px;
+  border-bottom: 1px solid #aaaaaa;
+  color: #666666;
+}
+
+.modal.exportModal {
+  min-height: 350px;
+  width: 600px;
+}
+
+.modal.exportModal td {
+  text-align: left;
+}
+
+.modal.exportModal td select {
+  width: auto;
+}
+
+.modal.exportModal th {
+  width: 115px;
+}
+
+ul.ac {
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 10px #cccccc;
+  border: 1px solid #aaaaaa;
+}
+
+ul.ac li {
+  padding: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #777777;
+}
+
+ul.ac li:hover {
+  background-color: #777777;
+  color: #ffffff;
+}
+
+ul.buttons a,
+a.button,
+ul.buttons li span {
+  font-size: 15px;
+  font-family: Abel, Tahoma;
+  text-decoration: none;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 6px 10px;
+  border-radius: 1px;
+  border: 1px solid #063900;
+  display: block;
+  text-shadow: #222222 1px 1px 2px;
+  background-repeat: no-repeat;
+  background-position: 9px center;
+}
+
+ul.buttons a:hover,
+a.button:hover,
+ul.buttons li span:hover {
+  color: yellow;
+}
+
+ul.buttons a.selected,
+a.button.selected,
+ul.buttons li span.selected {
+  background: #ffffff;
+  color: #196390;
+  border-bottom-color: #ffffff;
+  text-shadow: none;
+}
+
+ul.headerbuttons a {
+  padding: 6px 16px 6px 28px;
+}
+
+ul.headerbuttons a.save {
+  background-image: url(icons/save.png);
+}
+
+ul.headerbuttons a.run {
+  background-image: url(icons/check.png);
+}
+
+ul.headerbuttons a.reset {
+  background-image: url(icons/reset.png);
+}
+
+ul.headerbuttons a.fork {
+  background-image: url(icons/fork.png);
+}
+
+ul.headerbuttons a.base {
+  background-image: url(icons/base.png);
+}
+
+ul.headerbuttons a.based {
+  background-image: url(icons/based.png);
+}
+
+ul.headerbuttons a.options {
+  background-image: url(icons/cog.png);
+}
+
+ul.buttons li span {
+  color: #dddddd;
+}
+
+ul.buttons li span:hover {
+  color: #dddddd;
+}
+
+.embedded ul.buttons a {
+  padding-left: 16px;
+}
+
+a.toggle {
+  position: absolute;
+  width: 10px;
+  height: 11px;
+  background: url(toggle.png) no-repeat left top;
+  left: -1px;
+  top: 0;
+}
+
+a.toggle.closed {
+  background-position: right top;
+}
+
+ul.buttons {
+  overflow: hidden;
+}
+
+ul.buttons li {
+  background: #186900 url(header.png);
+  float: left;
+  margin-right: 5px;
+}
+
+ul.buttons li.right {
+  float: right;
+  margin: 0;
+}
+
+ul.buttons li.group {
+  margin: 0;
+}
+
+ul.buttons li.group a {
+  border-left-width: 0;
+}
+
+ul.buttons li.groupStart a {
+  border-left-width: 1px;
+}
+
+ul.buttons li.groupEnd {
+  margin-right: 20px;
+}
+
+ul.buttons.tabbuttons {
+  margin-right: 5px;
+}
+
+ul.buttons.tabbuttons li {
+  margin: 0;
+}
+
+ul.buttons.tabbuttons li a {
+  border-radius: 0;
+}
+
+ul.buttons.tabbuttons li a.selected {
+  background-color: #ffffff;
+  color: #0c2647;
+}

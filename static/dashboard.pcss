@@ -1,0 +1,47 @@
+body.dashboard:
+	.fiddleWrap:
+		background-color: #eee
+		padding: 10px
+	.pagehead:
+		padding: 10px
+		background: #fff
+		h2:
+			padding: 0
+	.fiddleList:
+		background: #fff
+	.fiddleDisplay:
+		padding: 10px
+		border: 1px solid #fff
+		border-bottom-color: #aaa
+		font-family: Tahoma, Arial
+		
+		ul.revisionList:
+			margin-left: 15px
+			li:
+				padding: 7px 0
+				border: 1px solid #fff
+				margin-left: 15px
+				&.base:
+					margin-left: 0
+					a:
+						font-size: 14px
+						font-weight: bold
+				a:
+					color: #0C2647
+					font-size: 13px
+					text-decoration: underline
+					&.delete:
+						color: #E0524A
+						font-size: 11px
+					.slug:
+						font-size: 12px
+						font-weight: normal
+						color: #333
+				.date:
+					font-size: 11px
+	.deleting:
+		background-color: #FAE7E6
+		border-color: #E0524A!important
+		li:
+			border-color: #FAE7E6!important
+			text-decoration: line-through

@@ -1,0 +1,5 @@
+<select name="{{name}}_theme" class="theme_select">
+	{% for url, name in manifest.themes %}
+	<option value="{{name}}" {% if theme == name %}selected="selected"{% endif %}>{{name|capfirst}}</option>
+	{% endfor %}
+</select>

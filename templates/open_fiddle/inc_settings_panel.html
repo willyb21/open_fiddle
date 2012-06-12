@@ -1,0 +1,122 @@
+{% if user.is_authenticated %}
+<div id="settingsPanel" class="modal" style="display: none">
+	<div class="header">
+		<a href="#" class="close right"><img src="{{STATIC_URL}}close.png" /></a>
+		<h3>SETTINGS</h3>
+		<span id="settingsMessage" style="display: none;" class="loading message loadmessage">Savin'</span>
+	</div>
+	<form method="post" action="{% url settings %}" id="settingsForm">
+		{% csrf_token %}
+		<div id="settingsTabs">
+			<ul class="buttons tabs header">
+				<li><a href="#settingsDefaults">Defaults</a></li>
+				<li><a href="#settingsFrameworks">Frameworks</a></li>
+				<li><a href="#settingsResources">Resources</a></li>
+				<li><a href="#settingsKeys">Keyboard Shortcuts</a></li>
+			</ul>
+			<div class="wrapper" id="tabWrapper">
+				
+				<div id="settingsDefaults" class="tabPanel">
+					<p class="attention help_text">All new fiddles will start with these defaults.</p>
+					<p>{{settingsform.framework.label_tag}} {{settingsform.framework}}</p>
+					<p><label>Panels</label></p>
+					<div style="width: 200px">
+					<table class="panels">
+						<thead></thead>
+						<tbody>
+							<tr>
+								<td><select disabled="disabled"><option selected="selected">HTML</option></select></td>
+								<td>{{settingsform.csspanel}}</td>
+							</tr>
+							<tr>
+								<td>{{settingsform.jspanel}}</td>
+								<td>Results</td>
+							</tr>
+						</tbody>
+					</table>
+					</div>
+					<p><label>Themes</label></p>
+					<div style="width: 200px">
+					<table class="panels">
+						<thead></thead>
+						<tbody>
+							<tr>
+								<td>{{settingsform.htmlTheme}}</td>
+								<td>{{settingsform.cssTheme}}</td>
+							</tr>
+							<tr>
+								<td>{{settingsform.javascriptTheme}}</td>
+								<td>Results</td>
+							</tr>
+						</tbody>
+					</table>
+					</div>
+					<p>{{settingsform.bodytag.label_tag}} {{settingsform.bodytag}}</p>
+				</div>
+				<div id="settingsFrameworks" class="tabPanel">
+					{{settingsform.frameworks}}
+					<p class="attention notice">Choose which frameworks you see. You can add custom frameworks here too.</p>
+					<p><a href="#" class="add button left" id="newFramework">Add new</a></p>
+					<table class="pairing frameworkPairing" id="frameworkPairs">
+						<thead><tr><th></th><th><label>Name</label></th><th><label>URL</label></th><th></th></tr></thead>
+						<tbody>
+					{% for n, v in manifest.frameworks %}
+							<tr>
+								<td><span class="handle"></span></td>
+								<td><input type="text" name="fName" value="{{v}}" class="name" /></td>
+								<td><input type="text" name="fURL" value="{{n}}" /></td>
+								<td><a class="remove" href="#">X</a></td>
+							</tr>
+					{% endfor %}
+						</tbody>
+					</table>
+				</div>
+				<div id="settingsResources" class="tabPanel">
+					{{settingsform.resources}}
+					<p class="attention notice">Choose which resources you want to have easy access to. These can be found in the dropdown by the thingamajig.</p>
+					<ul class="buttons">
+						<li><a href="#" class="add" id="newResource">Add new</a></li>
+						<li><a href="#" class="upload" id="uploadResource">Upload</a></li>
+					</ul>
+					<table class="pairing resourcePairing" id="resourcePairs">
+						<thead><tr><th></th><th><label>Name</label></th><th><label>URL</label></th><th></th></tr></thead>
+						<tbody>
+					{% for n, v in manifest.resources %}
+							<tr>
+								<td><span class="handle"></span></td>
+								<td><input type="text" name="fName" value="{{v}}" class="name" /></td>
+								<td><input type="text" name="fURL" value="{{n}}" /></td>
+								<td><a class="remove" href="#">X</a></td>
+							</tr>
+					{% empty %}
+							<tr>
+								<td><span class="handle"></span></td>
+								<td><input type="text" name="fName" value="" class="name" /></td>
+								<td><input type="text" name="fURL" value="" /></td>
+								<td><a class="remove" href="#">X</a></td>
+							</tr>
+					{% endfor %}
+						</tbody>
+					</table>
+				</div>
+				<div id="settingsKeys" class="tabPanel">
+					{{settingsform.keybindings}}
+					<p class="attention notice">Choose which key combinations perform shortcuts.</p>
+					<table class="pairing keyPairing" id="keyPairs">
+						<thead><tr><th><label>Command</label></th><th><label>Key combination</label></th></tr></thead>
+						<tbody>
+							{% for name, combo in manifest.keybindings %}
+							<tr>
+								<td>{{name|capfirst}}</td>
+								<td><span class="keycombo" data-name="{{name}}" data-combo="{{combo}}">{{combo}}</td>
+							</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<p class="submit"><button type="submit">Save settings</button></p>
+	</form>
+</div>
+{% endif %}

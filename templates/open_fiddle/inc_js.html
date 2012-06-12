@@ -1,0 +1,14 @@
+{% if object.jspanel == 'coffeescript' %}{% include 'open_fiddle/inc_coffee.html' %}{% else %}
+<script >
+	{% if object.wrap == 'domready' %}
+		{% if object.framework.group.name == 'jQuery' %}
+$( function(){
+{{object.javascript|safe}}
+});
+		{% endif %}
+	{% else %}
+{{object.javascript|safe}}
+	{% endif %}
+</script>
+{% endif %}
+

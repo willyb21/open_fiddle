@@ -1,0 +1,209 @@
+{% extends 'open_fiddle/base.html' %}
+{% load fiddle_tags  i18n %}
+
+{% block body_class %}fiddle_edit {% if theme %}{{theme}}{% else %}default{% endif %}{% endblock %}
+
+{% block css %}
+{{block.super}}
+{% include 'open_fiddle/inclusion/css.html' %}
+{% endblock %}
+
+{% block javascript %}
+{{block.super}}
+{% include 'open_fiddle/inclusion/javascript.html' %}
+<script>
+	$( function(){
+		new $.Fiddle({
+			el: '#fiddle'{% if object %},
+			fiddle: {{object|json}}{% endif %}
+		});
+	});
+</script>
+{% endblock %}
+
+
+
+{% block container %}
+    <div id="header" class="header">
+		<h1><a href="/">OPEN FIDDLE</a></h1>
+	{% include 'open_fiddle/inclusion/site_links.html' %}
+	{% include 'open_fiddle/inclusion/buttons.html' %}
+	</div>
+
+<div id="fiddle">
+	<form method="post" action=" " id="fiddleForm">
+		{% csrf_token %}
+		{{form.resources}}
+		<div id="fiddleWrap" class="wrapper">
+			<div class="panel left leftPanel" id="sidebar">
+				{% if object %}<p class="current_name" title="{% firstof object.title object.slug %}">{% firstof object.title object.slug %}</p>{% endif %}
+				<ul class="accordion">
+					<li><a href="#">{% trans 'Framework' %} (<span id="currentFramework" class="inlinespan">None</span>)</a>
+						<div class="content">
+							<p>{{form.wrap}}</p>
+							<p>
+								<select name="framework" id="id_framework">
+									<option value="">None</option>
+									{% for framework in frameworks %}
+									{% ifchanged framework.group %}
+									{% if not forloop.first %}</optgroup>{% endif %}
+									<optgroup label="{{framework.group.name}}">{% endifchanged %}
+									<option value="{{framework.pk}}">{{framework.name}}</option>
+									{% endfor %}
+								</select>
+							</p>
+							<div id="frameworkDeps" class="depslist">
+							{{form.deps}}
+							</div>
+							<p>{{form.framework_attrs.label_tag}} {{form.framework_attrs}}</p>
+							<p><label>{{form.cssreset}} Reset CSS</label></p>
+						</div>
+					</li>
+					<li>
+						<a href="#">{% trans 'Resources' %} (<span class="rsc" id="resourceCount">{{object.get_resources|length}}</span>)</a>
+						<div class="content">
+							<p class="combo">
+								<a class="right button" href="#" id="resourceButton">+</a><input type="text" name="resource" /> 
+								<a id="uploadResource" href="#">{% trans 'Upload' %}</a>
+							</p>
+							<ol id="resourceList">
+								
+							</ol>
+							
+						</div>
+					</li>
+					<li><a href="#">{% trans 'Panels' %}</a>
+						<div class="content">
+							<table class="panels">
+								<thead></thead>
+								<tbody>
+									<tr>
+										<td><select disabled="disabled"><option selected="selected">HTML</option></select></td>
+										<td>{{form.csspanel}}</td>
+									</tr>
+									<tr>
+										<td>{{form.jspanel}}</td>
+										<td>Results</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</li>
+					<li><a href="#">{% trans 'Info' %}</a>
+						<div class="content">
+							<p>{{form.title.label_tag}} {{form.title}}</p>
+							<p>{{form.description.label_tag }} {{ form.description}}</p>
+							<p>{{form.bodytag.label_tag}} {{form.bodytag}}</p>
+					</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="panel rightPanel contentPanel" id="contentPanel">
+				<div id="panelMask" class="panelMask"></div>
+				<div class="panelWrap" id="resizeWrap">
+				<a id="leftToggle" class="toggle" href="#" title="Hide Sidebar"></a>
+					<div class="panelColumn" id="leftColumn">
+						<div class="editor" id="HTMLEditor">{{form.html}}</div>
+						<div class="resizer nsresizer"></div>
+						<div class="editor" id="jsEditor">{{form.javascript}}</div>
+					</div>
+					<div class="resizer ewresizer"></div>
+					<div class="panelColumn" id="rightColumn">
+						<div class="editor" id="CSSEditor">{{form.css}}</div>
+						<div class="resizer nsresizer"></div>
+						<div class="editor" id="resultPanel"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+<div id="overlay" class="overlay" style="display: none;"></div>
+<div id="uploadModal" class="modal">
+	<a class="close right" href="#"></a>
+	<h3>UPLOAD</h3>
+	<p>The accepted resource upload types are</p>
+	<ul>
+		<li><strong>{% trans 'Images' %}</strong> ( .png, .jpg, .gif )</li>
+		<li><strong>{% trans 'Scripts' %}</strong> ( .js, .cs )</li>
+		<li><strong>{% trans 'Stylesheets' %}</strong> ( .css, .scss, .pcss )</li>
+	</ul>
+	<p>{% trans "These files will be available to all your fiddles and can be added as resources and targeted inside your HTML ( if you're using the Django template setting)" %}</p>
+	<form method="post" action="{% url 'upload' %}" enctype="multipart/form-data">
+		{% csrf_token %}
+		<p class="fileInput"><input type="file" name="resource" id="uploadInput" /></p>
+	</form>
+</div>
+<div id="editorModal" class="modal editorModal">
+	 <form method="get" action="">
+		 <table>
+			 <thead></thead>
+			 <tbody>
+				<tr>
+					<th>Mode</th>
+					<td class="mode"></td>
+				</tr>
+				<tr>
+					<th>{{pform.theme.label_tag}}</th>
+					<td>{{pform.theme}}</td>
+				</tr>
+				<tr>
+					<th>{{pform.tabSize.label_tag}}</th>
+					<td>{{pform.tabSize}}</td>
+				</tr>
+				<tr>
+					<th>{{pform.lineWrapping.label_tag}}</th>
+					<td>{{pform.lineWrapping}}</td>
+				</tr>
+				<tr>
+					<th>{{pform.lineNumbers.label_tag}}</th>
+					<td>{{pform.lineNumbers}}</td>
+				</tr>
+				<tr>
+					<th>{{pform.firstLineNumber.label_tag}}</th>
+					<td>{{pform.firstLineNumber}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+</div>
+<div id="optionsModal" class="modal optionsModal">
+	<ul>
+		<li><a href="#" id="exportFiddle" class="export">Export this fiddle</a></li>
+		<li><a href="#" id="lintFiddle" class="export">JS Hint</a></li>
+		<li><a href="#" id="tidyFiddle" class="export">JS Tidy</a></li>
+		{% if object and object.creator == user %}<li><a href="#" id="deleteFiddle" class="remove">Delete this fiddle</a></li>{% endif %}
+	</ul>
+</div>
+{% if object %}
+<div id="exportModal" class="modal exportModal">
+	<a class="close right" href="#" title="close"></a>
+	<h3>EXPORT FIDDLE</h3>
+	<form method="post" action="">
+		{% csrf_token %}
+		<table><thead></thead>
+			<tbody>
+				<tr>
+					<th>{{exportform.name.label_tag }}</th>
+					<td>{{exportform.name}}</th>
+					<td class="help_text">{{exportform.name.help_text}}</td>
+				</tr>
+				<tr>
+					<th>{{exportform.index_name.label_tag }}</th>
+					<td>{{exportform.index_name}}</th>
+					<td class="help_text">{{exportform.index_name.help_text}}</td>
+				</tr>
+				<tr>
+					<th>{{exportform.format.label_tag }}</th>
+					<td>{{exportform.format}}</th>
+					<td class="help_text">{{exportform.format.help_text}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<p class="center"><button type="submit">Export</button></p>
+	</form>
+</div>
+{% endif %}
+{% endblock %}

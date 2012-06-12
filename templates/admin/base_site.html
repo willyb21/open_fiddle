@@ -1,0 +1,15 @@
+{% extends "admin/base.html" %}
+{% load i18n cleverstyle_tags %}
+
+{% block extrastyle %}
+{{block.super}}
+<link href='http://fonts.googleapis.com/css?family=Abel|Open+Sans+Condensed:300|Signika:400,600|Maven+Pro' rel='stylesheet' type='text/css'>
+{% cleverstyle 'header.pcss' %}
+{% endblock %}
+{% block title %}{{ title }} | FIDDLE RIPOFF {% trans 'admin' %}{% endblock %}
+
+{% block branding %}
+<h1><a href="/">FIDDLE RIPOFF</a> </h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

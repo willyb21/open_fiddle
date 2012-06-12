@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load cleverstyle_tags  %}
+{% block body_class %}auth{% endblock %}
+
+
+{% block css %}
+	{{block.super}}
+	{% cleverstyle 'auth.pcss' %}
+{% endblock %}
+
+

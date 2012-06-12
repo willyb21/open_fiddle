@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load fiddle_tags %}
+
+{% block body_class %}embedded{% endblock %}
+{% block css %}
+{{block.super}}
+<link rel="stylesheet" href="{{STATIC_URL}}javascript/codemirror/lib/codemirror.css" />
+<link rel="stylesheet" href="{{STATIC_URL}}javascript/codemirror/theme/cobalt.css" />
+<link rel="stylesheet" href="{{STATIC_URL}}javascript/codemirror/theme/eclipse.css" />
+<link rel="stylesheet" href="{{STATIC_URL}}javascript/codemirror/theme/elegant.css" />
+<link rel="stylesheet" href="{{STATIC_URL}}javascript/codemirror/theme/monokai.css" />
+<link rel="stylesheet" href="{{STATIC_URL}}javascript/codemirror/theme/neat.css" />
+<link rel="stylesheet" href="{{STATIC_URL}}javascript/codemirror/theme/night.css" />
+<link rel="stylesheet" href="{{STATIC_URL}}javascript/codemirror/theme/rubyblue.css" />
+{% endblock %}
+
+
+{% block javascript %}
+{% include 'jquery.html' %}
+{% include 'backbone.html' %}
+<script src="{{STATIC_URL}}javascript/keyboard.0.2.2.min.js"></script>
+<script src="{{STATIC_URL}}javascript/codemirror/lib/codemirror.js"></script>
+<script src="{{STATIC_URL}}javascript/codemirror/mode/javascript/javascript.js"></script>
+<script src="{{STATIC_URL}}javascript/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="{{STATIC_URL}}javascript/codemirror/mode/xml/xml.js"></script>
+<script src="{{STATIC_URL}}javascript/codemirror/mode/css/css.js"></script>
+<script src="{{STATIC_URL}}javascript/codemirror/mode/pcss/pcss.js"></script>
+<script src="{{STATIC_URL}}models.js"></script>
+<script src="{{STATIC_URL}}embedded.js"></script>
+<script>
+	var embedded=new $.EmbeddedFiddle({
+		el: '#contentWrap',
+		fiddle: {{object|json}}
+	})
+</script>
+{% endblock %}
+
+{% block header %}
+{{block.super}}
+<ul class="buttons right">
+	<li class="group groupStart groupEnd"><a href="{{object.get_absolute_url}}" title="Edit this fiddle"><img src="{{STATIC_URL}}icons/edit.png" /></a></li>
+</ul>
+<ul class="buttons right tabbuttons">
+	{% for tab in tabs %}
+	<li class="group{% if forloop.first %} groupStart{% else %}{% if forloop.last %} groupEnd{% endif %}{% endif %}"><a href="#tab_{{tab.tab}}" class="tab{% if forloop.first %} selected{% endif %}">{{tab.name}}</a></li>
+	{% endfor %}
+</ul>
+{% endblock %}
+
+{% block main %}
+<div id="contentWrap" class="embeddedWrap">
+	{% for tab in tabs %}
+	<div id="tab_{{tab.tab}}" data-name="{{tab.tab}}" class="tabContent" style="display: none">
+		{% if tab.tab == 'results' %}
+		<iframe src="{{object.get_src_url}}" id="resultFrame"></iframe>
+		{% else %}
+		<textarea name="{{tab.tab}}_ta">{{object|attrib:tab.tab}}</textarea>
+		{% endif %}
+	</div>
+	{% endfor %}
+</div>
+{% endblock %}

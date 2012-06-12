@@ -1,0 +1,24 @@
+<ul class="buttons headerbuttons" id="fiddleButtons">
+	<li class="groupEnd"><a href="#" id="runFiddle" title="Run this fiddle" class="run">Run</a></li>
+	
+	<li class="group groupStart"><a href="#" id="saveFiddle" title="{% if not object or object.temp %}Save a new copy{% else %}Update{% endif %}" class="save">{% if object %}Update{% else %}Save{% endif %}</a></li>
+	
+	<li class="group{% if not object %} groupEnd{% endif %}"><a href="#" id="resetFiddle" title="Reset all fields" class="reset">Reset</a></li>
+	
+	{% if object %}
+	<li class="group groupEnd"><a href="#" id="forkFiddle" title="Create a clone of this fiddle" class="fork">Fork</a></li>
+		{% if object.creator == user %}
+			
+	<li class="group groupStart groupEnd">
+		{% if not object.base %}<a href="#" id="baseFiddle" title="Make this version the base" data-prop="baseFiddle" class="base">Base</a>
+			{% else %}<span class="based" title="This is the base revision">Base</span></li>
+			{% endif %}
+		{% endif %}
+	{% endif %}
+	
+	<li class="group groupStart groupEnd">
+		<a href="#" id="optionsFiddle" class="options">Options</a>
+	</li>
+	
+</ul>
+

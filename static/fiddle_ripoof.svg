@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.1 "
+   sodipodi:docname="fiddle_ripoof.svg">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient3793">
+      <stop
+         style="stop-color:#be0101;stop-opacity:1;"
+         offset="0"
+         id="stop3795" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="1"
+         id="stop3797" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3793"
+       id="linearGradient3879"
+       gradientUnits="userSpaceOnUse"
+       x1="-409.19702"
+       y1="75.498229"
+       x2="-390.95096"
+       y2="75.49823"
+       gradientTransform="translate(18.281287,-211.36401)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3793"
+       id="linearGradient3886"
+       gradientUnits="userSpaceOnUse"
+       x1="-409.19702"
+       y1="75.498229"
+       x2="-390.95096"
+       y2="75.49823"
+       gradientTransform="translate(33.281385,60.367555)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="4"
+     inkscape:cx="157.09128"
+     inkscape:cy="685.32039"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="738"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="C:\Users\Lenny\Dropbox\python\apps\fiddler\static\point.png"
+       transform="matrix(0,-1,1,0,0,0)"
+       style="fill:url(#linearGradient3886);fill-opacity:1;stroke:#945454;stroke-opacity:1"
+       id="rect3781"
+       width="13.999997"
+       height="13.999997"
+       x="-375.91565"
+       y="128.86578"
+       ry="2.545454"
+       rx="2.545454" />
+    <rect
+       rx="2.545454"
+       ry="2.545454"
+       y="-142.86578"
+       x="-390.91574"
+       height="13.999997"
+       width="13.999997"
+       id="rect3810"
+       style="fill:url(#linearGradient3879);fill-opacity:1;stroke:#945454;stroke-opacity:1"
+       transform="matrix(0,-1,-1,0,0,0)"
+       inkscape:export-filename="C:\Users\Lenny\Dropbox\python\apps\fiddler\static\point.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       style="fill:#0c2647;fill-opacity:1;stroke:none"
+       id="rect2985"
+       width="11"
+       height="11"
+       x="117.36578"
+       y="372.41574"
+       ry="2"
+       rx="2"
+       inkscape:export-filename="C:\Users\Lenny\Dropbox\python\apps\fiddler\static\point.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="path3757"
+       sodipodi:sides="3"
+       sodipodi:cx="121.25"
+       sodipodi:cy="376.86218"
+       sodipodi:r1="5.0311532"
+       sodipodi:r2="2.5155766"
+       sodipodi:arg1="-0.52359878"
+       sodipodi:arg2="0.52359878"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 125.60711,374.34661 -2.17856,3.77336 -2.17855,3.77337 -2.17855,-3.77337 -2.17856,-3.77336 4.35711,0 z"
+       inkscape:transform-center-y="0.72637401"
+       transform="matrix(0.57749829,0,0,0.57749829,52.844117,159.5521)"
+       inkscape:export-filename="C:\Users\Lenny\Dropbox\python\apps\fiddler\static\point.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       rx="2"
+       ry="2"
+       y="117.36578"
+       x="-394.41583"
+       height="11"
+       width="11"
+       id="rect3765"
+       style="fill:#0c2647;fill-opacity:1;stroke:none"
+       transform="matrix(0,-1,1,0,0,0)"
+       inkscape:export-filename="C:\Users\Lenny\Dropbox\python\apps\fiddler\static\point.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       transform="matrix(0,-0.57749829,0.57749829,0,-95.497852,458.93751)"
+       inkscape:transform-center-y="0.72637838"
+       d="m 125.60711,374.34661 -2.17856,3.77336 -2.17855,3.77337 -2.17855,-3.77337 -2.17856,-3.77336 4.35711,0 z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="false"
+       sodipodi:arg2="0.52359878"
+       sodipodi:arg1="-0.52359878"
+       sodipodi:r2="2.5155766"
+       sodipodi:r1="5.0311532"
+       sodipodi:cy="376.86218"
+       sodipodi:cx="121.25"
+       sodipodi:sides="3"
+       id="path3767"
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       sodipodi:type="star"
+       inkscape:export-filename="C:\Users\Lenny\Dropbox\python\apps\fiddler\static\point.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       style="fill:#0c2647;fill-opacity:1;stroke:none"
+       id="rect3771"
+       width="11"
+       height="11"
+       x="-405.41595"
+       y="-128.36578"
+       ry="2"
+       rx="2"
+       transform="matrix(0,-1,-1,0,0,0)"
+       inkscape:export-filename="C:\Users\Lenny\Dropbox\python\apps\fiddler\static\point.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="path3773"
+       sodipodi:sides="3"
+       sodipodi:cx="121.25"
+       sodipodi:cy="376.86218"
+       sodipodi:r1="5.0311532"
+       sodipodi:r2="2.5155766"
+       sodipodi:arg1="-0.52359878"
+       sodipodi:arg2="0.52359878"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 125.60711,374.34661 -2.17856,3.77336 -2.17855,3.77337 -2.17855,-3.77337 -2.17856,-3.77336 4.35711,0 z"
+       inkscape:transform-center-y="0.72637731"
+       transform="matrix(0,-0.57749829,-0.57749829,0,341.22943,469.93761)"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       inkscape:export-filename="C:\Users\Lenny\Dropbox\python\apps\fiddler\static\point.png" />
+    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="C:\Users\Lenny\Dropbox\python\apps\fiddler\static\point.png"
+       rx="2"
+       ry="2"
+       y="-372.41565"
+       x="117.36578"
+       height="11"
+       width="11"
+       id="rect3832"
+       style="fill:#0c2647;fill-opacity:1;stroke:none"
+       transform="scale(1,-1)" />
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="C:\Users\Lenny\Dropbox\python\apps\fiddler\static\point.png"
+       transform="matrix(0.57749829,0,0,-0.57749829,52.844117,585.27928)"
+       inkscape:transform-center-y="0.72637401"
+       d="m 125.60711,374.34661 -2.17856,3.77336 -2.17855,3.77337 -2.17855,-3.77337 -2.17856,-3.77336 4.35711,0 z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="false"
+       sodipodi:arg2="0.52359878"
+       sodipodi:arg1="-0.52359878"
+       sodipodi:r2="2.5155766"
+       sodipodi:r1="5.0311532"
+       sodipodi:cy="376.86218"
+       sodipodi:cx="121.25"
+       sodipodi:sides="3"
+       id="path3834"
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       sodipodi:type="star" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="path3908"
+       sodipodi:sides="3"
+       sodipodi:cx="121.25"
+       sodipodi:cy="376.86218"
+       sodipodi:r1="5.0311532"
+       sodipodi:r2="2.5155766"
+       sodipodi:arg1="-0.52359878"
+       sodipodi:arg2="0.52359878"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 125.60711,374.34661 -2.17856,3.77336 -2.17855,3.77337 -2.17855,-3.77337 -2.17856,-3.77336 4.35711,0 z"
+       transform="matrix(0,-0.57749829,-0.57749829,0,354.22942,438.93732)"
+       inkscape:export-filename="C:\Users\Lenny\Dropbox\python\apps\fiddler\static\point.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       inkscape:transform-center-x="-0.72637073" />
+    <path
+       inkscape:transform-center-x="0.7263705"
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="C:\Users\Lenny\Dropbox\python\apps\fiddler\static\point.png"
+       transform="matrix(0,-0.57749829,0.57749829,0,-82.497851,453.93741)"
+       d="m 125.60711,374.34661 -2.17856,3.77336 -2.17855,3.77337 -2.17855,-3.77337 -2.17856,-3.77336 4.35711,0 z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="false"
+       sodipodi:arg2="0.52359878"
+       sodipodi:arg1="-0.52359878"
+       sodipodi:r2="2.5155766"
+       sodipodi:r1="5.0311532"
+       sodipodi:cy="376.86218"
+       sodipodi:cx="121.25"
+       sodipodi:sides="3"
+       id="path3910"
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       sodipodi:type="star" />
+    <path
+       style="fill:none;stroke:#b1b1b1;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 126.04189,358.06077 16.26343,0"
+       id="path3914"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\Lenny\Dropbox\python\apps\fiddler\static\hresize.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path3916"
+       d="m 126.04189,355.57883 16.26343,0"
+       style="fill:none;stroke:#b1b1b1;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="C:\Users\Lenny\Dropbox\python\apps\fiddler\static\hresize.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="C:\Users\Lenny\Dropbox\python\apps\fiddler\static\vresize.png"
+       inkscape:connector-curvature="0"
+       id="path3920"
+       d="m 157.68137,349.3952 0,16.26343"
+       style="fill:none;stroke:#b1b1b1;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="C:\Users\Lenny\Dropbox\python\apps\fiddler\static\vresize.png"
+       style="fill:none;stroke:#b1b1b1;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 160.16331,349.3952 0,16.26343"
+       id="path3922"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

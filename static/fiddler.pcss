@@ -1,0 +1,519 @@
+.right:
+	float: right
+.left:
+	float: left
+	
+body:
+	font-family: 'Abel', Tahoma, Arial
+	font-size: small
+	overflow: hidden
+	a:
+		text-decoration: none
+	&.embedded:
+		.header:
+			padding-bottom: 0!important
+	&.fiddle_edit:
+		label:
+			display: block
+			padding: 5px 0
+			color: #888
+		p.combo:
+			input[ type="text" ]:
+				width: 156px
+			.button:
+				vertical-align: top
+				display: block
+				width: 26px
+				background: #ddd
+				border-radius: 0
+				color: #333
+				border: 1px solid #aaa
+				border-left-width: 0
+				text-align: center
+				font-size: 17px
+				font-weight: bold
+				line-height: 24px
+				padding: 0
+		
+		input[ type="text" ], textarea, select:
+			margin: 0
+			color: #333
+		select:
+			display: block
+		table.panels:
+			td:
+				width: 50%
+				padding: 5px
+				select:
+					width: 85px
+					font-size: 11px
+			
+			
+.header:
+	padding: 5px
+	overflow: hidden
+	background: url( header.png ) repeat left top
+	h1:
+		float: left
+		width: 200px
+		padding: 5px 0
+		margin: 0
+		font-family: 'Maven Pro', Arial
+		letter-spacing: -1px
+		font-weight: bold
+		font-size: 22px
+		a:
+			color: #fff
+			text-decoration: none
+	
+input[ type="text" ], textarea:
+	border: 1px solid #aaa
+
+ul.inline:
+	margin-top: '-2px'
+	li:
+		float: left
+		overflow: visible
+		height: 12px
+		border-left: 1px solid #fff
+		padding: 0 10px
+		vertical-align: top
+		color: #fff
+		a:
+			color: #fff
+			display: block
+			position: relative
+		strong:
+			font-size: 15px
+			color: #E2FCFE
+			margin-right: 20px
+		&:first-child:
+			border: none
+.dropdown:
+	position: absolute
+	z-index: 35
+	border: 1px solid #444
+	background: #fff
+	ul:
+		width: 150px
+		li:
+			a:
+				padding: 8px 4px
+				color: #777
+				display: block
+				border-bottom: 1px dashed #777
+				&:hover:
+					background-color: #444
+					color: #fff
+			&:last-child a:
+				border-bottom: none
+	&.sharing:
+		width: 250px
+		input[type="text"]:
+			width: 225px
+			font-size: 11px
+			color: #555
+a.dropdownTrigger:
+	display: block
+	width: 11px
+	height: 11px
+	padding: 0!important
+	background: url( /static/point.png ) no-repeat left '-11px'
+	margin: 5px
+	&.down:
+		background-position: left bottom
+	&.open:
+		background-position: left '-22px'
+.CodeMirror:
+	line-height: 1.4em!important
+			
+table.pairing, table.sorting:
+	td, th:
+		padding: 8px
+	th:
+		text-align: left
+	td:
+		vertical-align: middle
+		.handle:
+			display: block
+			text-align: center
+			width: 20px
+			height: 20px
+			background: url( /static/drag.png ) no-repeat center center
+			cursor: move
+				
+	tr.deleted td:
+		background-color: #FFD2D2
+		input[ type="text" ]:
+			font-style: italic
+			color: #FD6C6C
+	&.keyPairing:
+		td:first-child:
+			width: 125px
+		input[ type="text"]:
+			width: 75px
+		span.keycombo:
+			//display: block
+			border: 1px solid #fff
+			color: #106F9B
+			font-size: 110%
+			cursor: pointer
+			&:hover:
+				border-color: #A4D9F2
+			
+	input[ type="text" ]:
+		font-size: 15px
+		padding: 4px
+		width: 550px
+		&.name:
+			width: 180px
+			
+			
+.leftPanel:
+	float:left
+	width: 199px
+	background: #fff
+	height: 100%
+	position: relative
+	border-right: 1px solid #aaa
+	&.hidden:
+		width: 0
+		padding: 0
+		ul:
+			display: none
+		a.toggler:
+			right: 0
+			top: 0
+	label:
+		font-size: 11px		
+	.accordion:
+		input[ type="text" ], textarea:
+			width: 181px
+			padding: 0 2px
+			height: 24px
+		select:
+			width: 187px
+			padding: 4px
+		textarea:
+			height: 80px
+		>li:
+			padding: 0
+			border-bottom: 1px solid #aaa
+			>a:
+				display: block
+				color: #555
+				font-size: 15px
+				padding: 8px 5px
+				background: url( /static/toggleright.png ) no-repeat 95% center
+				span:
+					font-size: 10px
+				&.open:
+					background-image: url( /static/toggledown.png )
+					background-color: #ddd
+					color: #333
+				&:hover:
+					color: #333
+			.content:
+				display: none
+				background: #F9f9f9
+	.depslist:
+		padding: 5px
+		ul:
+			label:
+				padding: 0
+				color: #333
+				font-size: 13px
+				input[type="checkbox"]:
+					margin: 1px 3px
+	ol:
+		list-style: none
+		padding: 5px
+		margin: 2px 10px
+		font-size: 14px
+		color: #333
+		a:
+			color: #222
+		li:
+			padding: 8px 0
+			border-bottom: 1px dashed #999
+		.remove:
+			background: #810000 url( /static/icons/reset.png ) no-repeat center center
+			display: block
+			width: 14px
+			height: 14px
+	p:
+		padding: 5px
+		overflow: hidden
+	p.current_name:
+		font-weight: bold
+		font-size: 15px
+		padding-left: 22px
+		color: #444
+		background: url( /static/icons/star.png ) no-repeat 2px center
+		border-bottom: 1px solid #999
+		white-space: nowrap
+		overflow: hidden
+			
+.inlinespan:
+	font-family: Arial
+	font-size: 11px
+	color: #333
+.rightPanel:
+	background: #eee
+	position: relative
+	margin-left: 200px
+	&.expanded:
+		margin-left: 0
+
+
+//* #resizeWrap ~ the outer layer of resizing */
+.panelWrap:
+	position: relative
+	overflow: hidden
+	textarea:
+		margin: 0
+		padding: 0
+		border: none
+	.resizer, .panelColumn:
+		position: absolute
+	.panelColumn:
+		z-index: 9
+		.editor:
+			position: absolute
+			background-color: #fff
+			z-index: 11
+			border: 1px solid #aaa
+			&.focus:
+				border-color: #14517C
+				border-style: ridge
+		.editorLabel:
+			background-color: #eee
+			position: relative
+			border-bottom: 1px solid #ccc
+			border-left: 1px solid #ccc
+			&.hiding:
+				opacity: .3
+				filter:`alpha(opacity=30)`
+				background: #fff
+				
+				.labelText:
+					color: #000
+			.labelText:
+				font-family: Arial
+				display: block
+				padding: 5px
+				color: #444
+				font-size: 12px
+				cursor: pointer
+	.resizer:
+		background: #eee url( /static/vresize.png ) no-repeat center center
+		z-index: 30
+		&.ewresizer:
+			width: 10px
+			height: 100%
+			cursor: ew-resize
+		&.nsresizer:
+			background-image: url( /static/hresize.png )
+			height: 10px
+			cursor: ns-resize
+			width: 100%
+
+.panelMask:
+	z-index: 29
+	position: absolute
+	
+				
+#leftColumn, #rightColumn:
+	top: 10px
+#leftColumn:
+	left: 10px
+#rightColumn:
+	left: 50%
+
+.overlay, .modal:
+	position: absolute
+	background: #fff
+.overlay:
+	opacity: .8
+	background: #333
+	z-index: 34
+	
+.modal:
+	z-index: 35
+	display: none
+	box-shadow: 0 0 15px #666
+	border-radius: 2px
+	border: 1px solid #19608C
+	width: 300px
+	position: absolute
+	strong:
+		font-weight: bold
+	h3:
+		padding: 5px
+		font-size: 17px
+		background:url( header.png ) repeat left top
+		color: #fff
+		cursor: move
+	a.close:
+		display: block
+		width: 14px
+		height: 14px
+		margin: 4px
+		background: url( icons/reset.png ) no-repeat center center
+	p, ul:
+		padding: 5px 15px
+		font-size: 13px
+		font-family: Arial
+	ul:
+		list-style: disc inside
+	p.fileInput:
+		margin: 10px
+		border: 1px solid #aaa
+		background: #eee
+	li:
+		padding: 5px
+	.help_text:
+		font-size: 11px
+		color: #195E8A
+	form:
+		table:
+			td, th:
+				padding: 6px
+				vertical-align: middle
+				text-align: center
+			th:
+				text-align: right
+			label:
+				display: inline
+				padding: 0
+				white-space: nowrap
+				color: #555
+			input[ type="text"], textarea:
+				padding: 4px
+				border-radius: 4px
+			select:
+				width: 100px
+		input.number:
+			width: 30px
+			text-align: center
+		input:
+			margin: 0
+	&.editorModal:
+		width: auto
+	&.optionsModal:
+		width: 200px
+		ul:
+			list-style: none
+			padding: 0
+			li:
+				padding: 0
+			a:
+				display: block
+				padding: 8px
+				border-bottom: 1px solid #aaa
+				color: #666
+	&.exportModal:
+		min-height: 350px
+		width: 600px
+		td:
+			text-align: left
+			select:
+				width: auto
+		th:
+			width: 115px
+ul.ac:
+	position: absolute
+	background-color: #fff
+	box-shadow: 2px 2px 10px #CCC
+	border: 1px solid #aaa
+	li:
+		padding: 4px
+		cursor: pointer
+		font-size: 13px
+		color: #777
+		&:hover:
+			background-color: #777
+			color: #fff
+
+ul.buttons a, a.button, ul.buttons li span:
+	font-size: 15px
+	font-family: 'Abel', Tahoma
+	text-decoration: none
+	font-weight:bold
+	color: #fff
+	padding: 6px 10px
+	border-radius: 1px
+	border: 1px solid #063900
+	display: block
+	text-shadow: #222 1px 1px 2px
+	background-repeat: no-repeat
+	background-position: 9px center
+	&:hover:
+		color: yellow
+	&.selected:
+		background: #FFF
+		color: #196390
+		border-bottom-color: #fff
+		text-shadow: none
+
+ul.headerbuttons a:
+	padding: 6px 16px 6px 28px
+	&.save:
+		background-image: url( icons/save.png )
+	&.run:
+		background-image: url( icons/check.png )
+	&.reset:
+		background-image: url( icons/reset.png )
+	&.fork:
+		background-image: url( icons/fork.png )
+	&.base:
+		background-image: url( icons/base.png )
+	&.based:
+		background-image: url( icons/based.png )
+	&.options:
+		background-image: url( icons/cog.png )
+	
+ul.buttons li span:
+	color: #ddd
+	&:hover:
+		color: #ddd
+.embedded ul.buttons a:
+	padding-left: 16px
+a.toggle:
+	position: absolute
+	width: 10px
+	height: 11px
+	background: url( toggle.png ) no-repeat left top
+	left: '-1px'
+	top: 0
+	&.closed:
+		background-position: right top
+	
+ul.buttons:
+	overflow: hidden
+	li:
+		background: #186900 url( header.png )
+		float: left
+		margin-right: 5px
+		&.right:
+			float: right
+			margin: 0
+		&.group:
+			margin: 0
+			a:
+				border-left-width: 0
+		&.groupStart:
+			a:
+				border-left-width: 1px
+		&.groupEnd:
+			margin-right: 20px
+	&.tabbuttons:
+		margin-right: 5px
+		li:
+			margin: 0
+			a:
+				border-radius: 0
+				&.selected:
+					background-color: #fff
+					color: #0C2647	
+			

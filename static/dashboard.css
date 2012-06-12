@@ -1,0 +1,74 @@
+body.dashboard .fiddleWrap {
+  background-color: #eeeeee;
+  padding: 10px;
+}
+
+body.dashboard .pagehead {
+  padding: 10px;
+  background: #ffffff;
+}
+
+body.dashboard .pagehead h2 {
+  padding: 0;
+}
+
+body.dashboard .fiddleList {
+  background: #ffffff;
+}
+
+body.dashboard .fiddleDisplay {
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-bottom-color: #aaaaaa;
+  font-family: Tahoma, Arial;
+}
+
+body.dashboard .fiddleDisplay ul.revisionList {
+  margin-left: 15px;
+}
+
+body.dashboard .fiddleDisplay ul.revisionList li {
+  padding: 7px 0;
+  border: 1px solid #ffffff;
+  margin-left: 15px;
+}
+
+body.dashboard .fiddleDisplay ul.revisionList li.base {
+  margin-left: 0;
+}
+
+body.dashboard .fiddleDisplay ul.revisionList li.base a {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+body.dashboard .fiddleDisplay ul.revisionList li a {
+  color: #0c2647;
+  font-size: 13px;
+  text-decoration: underline;
+}
+
+body.dashboard .fiddleDisplay ul.revisionList li a.delete {
+  color: #e0524a;
+  font-size: 11px;
+}
+
+body.dashboard .fiddleDisplay ul.revisionList li a .slug {
+  font-size: 12px;
+  font-weight: normal;
+  color: #333333;
+}
+
+body.dashboard .fiddleDisplay ul.revisionList li .date {
+  font-size: 11px;
+}
+
+body.dashboard .deleting {
+  background-color: #fae7e6;
+  border-color: #e0524a !important;
+}
+
+body.dashboard .deleting li {
+  border-color: #fae7e6 !important;
+  text-decoration: line-through;
+}

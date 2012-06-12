@@ -1,0 +1,24 @@
+.header,
+#header {
+  padding: 5px;
+  overflow: hidden;
+  background: url(header.png) repeat left top;
+}
+
+.header h1,
+#header h1 {
+  float: left;
+  width: 200px;
+  padding: 5px 0;
+  margin: 0;
+  font-family: 'Maven Pro', Arial;
+  letter-spacing: -1px;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.header h1 a,
+#header h1 a {
+  color: #ffffff;
+  text-decoration: none;
+}
